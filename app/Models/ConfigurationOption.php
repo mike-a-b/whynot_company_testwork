@@ -9,4 +9,6 @@ class ConfigurationOption extends Model
 {
     /** @use HasFactory<\Database\Factories\ConfigurationOptionFactory> */
     use HasFactory;
+
+    protected $guarded = ['id'];
 }

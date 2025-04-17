@@ -9,4 +9,11 @@ class Price extends Model
 {
     /** @use HasFactory<\Database\Factories\PriceFactory> */
     use HasFactory;
+
+    protected $guarded = ['id'];
+
+    public function configuration()
+    {
+        return $this->belongsTo(Configuration::class, 'configuration_id', 'id');
+    }
 }
